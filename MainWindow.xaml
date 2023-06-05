@@ -18,6 +18,34 @@
             <!-- causes it to be half as tall as each of the other rows.-->
             <RowDefinition Height=".5*"/>
         </Grid.RowDefinitions>
+        <TextBox x:Name="number" TextAlignment="Center" HorizontalAlignment="Left" Margin="27,41,0,0" TextWrapping="Wrap" Text="#" VerticalAlignment="Top" Width="220" FontSize="18" Grid.Column="2"/>
+        <Label Content="Enter a number: " HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" FontSize="18" Margin="10,10,0,0"/>
+        <TextBox x:Name="numberTextBox" TextAlignment="Center" HorizontalAlignment="Left" Margin="15,41,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="125" FontSize="18" TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"/>
+        <RadioButton Content="1" HorizontalAlignment="Left" Margin="215,44,0,0" VerticalAlignment="Top" Height="20" Width="30" Checked="RadioButton_Checked" RenderTransformOrigin="2.167,0.502"/>
+        <RadioButton Content="2" HorizontalAlignment="Left" Margin="265,44,0,0" VerticalAlignment="Top" Height="20" Width="30" Checked="RadioButton_Checked" RenderTransformOrigin="2.167,0.502" Grid.ColumnSpan="2"/>
+        <RadioButton Content="3" HorizontalAlignment="Left" Margin="43,44,0,0" VerticalAlignment="Top" Height="20" Width="30" Checked="RadioButton_Checked" RenderTransformOrigin="2.167,0.502" Grid.Column="1"/>
+        <ComboBox x:Name="readOnlyCombox" HorizontalAlignment="Left" Margin="48,172,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.RowSpan="2" SelectionChanged="readOnlyCombox_SelectionChanged" TextBoxBase.TextChanged="readOnlyCombox_TextChanged">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+        </ComboBox>
+        <ComboBox x:Name="editableComboBox" HorizontalAlignment="Left" Margin="127,0,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Grid.Row="1" IsEditable="True" SelectionChanged="editableComboBox_SelectionChanged">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+        </ComboBox>
+        <ListBox x:Name="myListBox" Grid.Row="1" Grid.ColumnSpan="2" Margin="18,0,248,86" Grid.RowSpan="2" SelectionChanged="myListBox_SelectionChanged">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+        </ListBox>
+        <Slider x:Name="smallSlider" HorizontalAlignment="Left" Margin="20,114,0,0" VerticalAlignment="Top" Width="260" Grid.ColumnSpan="2" ValueChanged="Slider_ValueChanged"/>
 
     </Grid>
 </Window>
